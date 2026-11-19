@@ -1,0 +1,22 @@
+/* Theme Variables & Tokens */
+:root {
+  --color-bg-main: #0B1020;
+  --color-sidebar: #10172A;
+  --color-card: #151E32;
+  --color-border: #27334A;
+  --color-accent-primary: #8B5CF6;
+  --color-accent-secondary: #3B82F6;
+  --color-accent-success: #22C55E;
+  --color-accent-warning: #F59E0B;
+  --color-accent-danger: #EF4444;
+  --color-text-main: #F8FAFC;
+  --color-text-sub: #94A3B8;
+}
+
+.theme-card-gradient {
+  background: linear-gradient(180deg, #18233D 0%, #131B2E 100%);
+}
+
+.theme-hero-gradient {
+  background: linear-gradient(135deg, rgba(88, 28, 135, 0.35) 0%, rgba(30, 58, 138, 0.25) 50%, rgba(15, 23, 42, 0.95) 100%);
+}

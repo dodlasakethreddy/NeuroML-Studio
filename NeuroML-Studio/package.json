@@ -1,0 +1,15 @@
+{
+  "name": "neuroml-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NeuroML Studio – AI/ML Model Training Platform",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview"
+  },
+  "dependencies": {
+    "@neon/config": "^1.14.2",
+    "@neon/env": "^2.1.5"
+  }
+}

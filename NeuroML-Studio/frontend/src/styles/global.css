@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #0B1020;
+    --bg-sidebar: #10172A;
+    --bg-card: #151E32;
+    --border-color: #27334A;
+    --primary-accent: #8B5CF6;
+    --secondary-accent: #3B82F6;
+    --success: #22C55E;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Custom sleek dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B1020;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27334A;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3B4A6B;
+  }
+}
+
+@layer components {
+  .neu-card {
+    background-color: #151E32;
+    border: 1px solid #27334A;
+    border-radius: 0.75rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .neu-card:hover {
+    border-color: #3B4A6B;
+  }
+
+  .neu-card-interactive {
+    background-color: #151E32;
+    border: 1px solid #27334A;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .neu-card-interactive:hover {
+    border-color: #8B5CF6;
+    box-shadow: 0 0 20px -5px rgba(139, 92, 246, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .neu-input {
+    background-color: #10172A;
+    border: 1px solid #27334A;
+    color: #F8FAFC;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+  }
+
+  .neu-input:focus {
+    outline: none;
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+  }
+
+  .neu-input::placeholder {
+    color: #64748B;
+  }
+
+  .glass-panel {
+    background: rgba(21, 30, 50, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(39, 51, 74, 0.8);
+  }
+
+  .gradient-brain-glow {
+    position: relative;
+  }
+  .gradient-brain-glow::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(59, 130, 246, 0.1) 60%, transparent 80%);
+    filter: blur(20px);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
